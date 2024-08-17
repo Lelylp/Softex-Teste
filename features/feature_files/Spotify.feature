@@ -28,13 +28,13 @@ Funcionalidade: Playlist Spotify
 
     @TesteBuscaFlexível
     Cenário: Digitar um termo de busca Inválido
-        Dado que o usuário está logado no Spotify2
+        Dado que o usuário está na página inicial do Spotify
         Quando o usuário insere "123**&&abcd00"
         Então o resultado deve ser flexível 
 
     @TesteBuscaDeUmaLetra
     Cenário: Digitar uma letra no campo de busca
-        Dado que o usuário está logado no Spotify2
+        Dado que o usuário está na página inicial do Spotify
         Quando o usuário insere "D"
         Então o usuário deve ser redirecionado para a página com artistas e músicas com a inicial "D"
 
