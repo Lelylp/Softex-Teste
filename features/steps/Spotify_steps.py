@@ -84,7 +84,7 @@ def step_impl(context):
 def step_impl(context):
     pass
 
-@given(u'que o usuário está logado no Spotify2')
+@given(u'que o usuário está na página inicial do Spotify')
 def step_impl(context):
     context.driver.get("https://open.spotify.com/intl-pt")
     context.treinamento_page = Spotify_page(context.driver)
