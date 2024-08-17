@@ -4,8 +4,8 @@ import time
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
+#Weslley
 # region Teste Criação_de_Playlist
-
 @given(u'que o usuário está logado no Spotify')
 def step_impl(context):
     context.driver.get("https://open.spotify.com/intl-pt")
@@ -21,12 +21,9 @@ def step_impl(context):
 @then(u'a playlist "{texto}" deve ser criada com sucesso')
 def step_impl(context,texto):
     assert texto == context.Spotify_page.Verificar_se_playlist_foi_criada()
-
-
 # endregion
 
 # region Teste Adicionar_música_na_playlist
-
 @given(u'selecionar playlist chamada "Minha playlist nº 1"')
 def step_impl(context):
     context.driver.get("https://open.spotify.com/intl-pt")
@@ -49,10 +46,9 @@ def step_impl(context):
 def step_impl(context,texto):
     time.sleep(2)
     assert texto == context.Spotify_page.verificar_musica()
-    
-
 # endregion
 
+#Ceciany
 @given(u'que o usuário está na página inicial do Spotify')
 def step_impl(context):
     context.driver.get("https://open.spotify.com/intl-pt")
@@ -84,12 +80,7 @@ def step_impl(context):
 def step_impl(context):
     pass
 
-@given(u'que o usuário está na página inicial do Spotify')
-def step_impl(context):
-    context.driver.get("https://open.spotify.com/intl-pt")
-    context.treinamento_page = Spotify_page(context.driver)
-    context.treinamento_page.clicar_botao_procurar()
-    time.sleep(5)
+#Heitor
 
 @when(u'o usuário insere "{texto}"')
 def step_impl(context, texto):
